@@ -1,55 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-
-    <title>Quiz Challenge| Intro section with dropdown navigation</title>
-  </head>
-  <body>
-    <main>
-      <!-- Navigation bar -->
-      <div class="overlay" id="overlay"></div>
-      <nav>
-        <div class="nav-logo-menu-bar">
-          <div class="logo">
-            <img src="images/logo.svg" alt="" />
-          </div>
-          <div class="menu-bar" onClick="openSlideMenu()">
-            <img src="images/icon-menu.svg" alt="open menu" />
-          </div>
-        </div>
-
-        <!-- Hidden on Mobile section starts here -->
-
-        <div class="nav-menu" id="nav-menu">
-          <div class="close-menu-icon" onClick="closeSlideMenu()">
-            <img src="images/icon-close-menu.svg" alt="close menu" />
-          </div>
-
-          <!-- Nav Item Section -->
-          <div class="nav-menu-item-container">
-            <!-- Features -->
-            <div
-              class="features nav-item"
-              onClick="toggleDropdown('features-expanded-list');"
-              tabindex="1"
-            >
-              <p>Features</p>
-              <div class="arrow-img"></div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <div class="overlay"></div>
+  <header>
+    <a href="#" aria-label="logo"><img src="./images/logo.svg" class="logo"></a>
+    <div class="menu">
+      <img src="./images/icon-menu.svg" class="open-menu">
+      <img src="./images/icon-close-menu.svg" class="close-menu">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-link">
+          <a href="#" aria-label="features" class="dropdown">
+            <span>Features</span>
+            <img src="./images/icon-arrow-up.svg" class="arrow-up">
+            <img src="./images/icon-arrow-down.svg" class="arrow-down">
+          </a>
+          <ul class="dropdown-list">
+            <li class="dropdown-link">
+              <a href="#" aria-label="todo-list">
+                <img src="./images/icon-todo.svg">
+                <span>Todo List</span>
+              </a>
+            </li>
+            <li class="dropdown-link">
+              <a href="#" aria-label="calender">
+                <img src="./images/icon-calendar.svg">
+                <span>Calender</span>
+              </a>
+            </li>
+            <li class="dropdown-link">
+              <a href="#" aria-label="reminders">
+                <img src="./images/icon-reminders.svg">
+                <span>Reminders</span>
+              </a>
+            </li>
+            <li class="dropdown-link">
+              <a href="#" aria-label="planning">
+                <img src="./images/icon-planning.svg">
+                <span>Planning</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-link">
+          <a href="#" aria-label="company" class="dropdown">
+            <span>Company</span>
+            <img src="./images/icon-arrow-up.svg" class="arrow-up">
+            <img src="./images/icon-arrow-down.svg" class="arrow-down">
+          </a>
+          <ul class="dropdown-list">
+            <li class="dropdown-link"><a href="#" aria-label="history">History</a></li>
+            <li class="dropdown-link"><a href="#" aria-label="our-team">Our Team</a></li>
+            <li class="dropdown-link"><a href="#" aria-label="blog">Blog</a></li>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="#" aria-label="careers">Careers</a></li>
+        <li class="nav-link"><a href="#" aria-label="about">About</a></li>
+      </ul>
+      <div class="registration">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <picture>
+      <source media="(min-width:465px)" srcset="./images/image-hero-desktop.png">
+      <img src="./images/image-hero-mobile.png">
+    </picture>
+    <section class="text-content">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button>Learn more</button>
+      <div class="clients">
+        <img src="./images/client-databiz.svg" alt="databiz logo">
+        <img src="./images/client-audiophile.svg" alt="audiophile">
+        <img src="./images/client-meet.svg" alt="meet">
+        <img src="./images/client-maker.svg" alt="maker">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
